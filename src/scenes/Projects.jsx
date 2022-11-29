@@ -30,7 +30,13 @@ const projects=[
         description:"This is responsive app where student can register,login and attend the classes,Submit the assignments,Check his score and attendance.",
         source:"https://github.com/AR-Pavan/capstone-backend",
         deployedUrl:"https://zenclass-capstone-project.netlify.app/"
-    },
+    },{
+      id:"3",
+      name:"Simple QuizApplication",
+      description:"This is a simple Quiz Application with beautiful UI",
+      source:"https://github.com/AR-Pavan/quiz-app-backend",
+      deployedUrl:"https://my-simple-quiz-app-007.netlify.app/",
+    }
 ]
 const Project = ({ item }) => {
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
