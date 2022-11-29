@@ -1,0 +1,11 @@
+.image img{
+    border-radius: 50% 50% 0% 0%;
+}
+
+.buttonsGrp{
+    position:absolute;
+    top:80%;
+    left:15%;
+    gap:1.5rem;
+    
+}
