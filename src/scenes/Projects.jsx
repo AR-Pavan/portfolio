@@ -2,9 +2,9 @@ import LineGradient from "../components/LineGradient";
 import { motion } from "framer-motion";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import Button from '@mui/material/Button';
-import Stack from '@mui/material/Stack';
 import StreamIcon from '@mui/icons-material/Stream';
 import "./Landing.css";
+import { Grid } from "@mui/material";
 const container = {
   hidden: {},
   visible: {
@@ -23,25 +23,28 @@ const projects=[
         name:"Social Media App",
         description:"This is fully Responsive app where user can securely Register,Login and Post the Images in the app.",
         source:"https://github.com/AR-Pavan/social-media-backend",
+        front:"https://github.com/AR-Pavan/social-media-frontend",
         deployedUrl:"https://deerdo.netlify.app/"
     },{
         id:"2",
         name:"Student Dashboard",
         description:"This is responsive app where student can register,login and attend the classes,Submit the assignments,Check his score and attendance.",
         source:"https://github.com/AR-Pavan/capstone-backend",
+        front:"https://github.com/AR-Pavan/capstone-frontend",
         deployedUrl:"https://zenclass-capstone-project.netlify.app/"
     },{
       id:"3",
       name:"Simple QuizApplication",
       description:"This is a simple Quiz Application with beautiful UI",
       source:"https://github.com/AR-Pavan/quiz-app-backend",
+      front:"https://github.com/AR-Pavan/quiz-app-frontend",
       deployedUrl:"https://my-simple-quiz-app-007.netlify.app/",
     }
 ]
 const Project = ({ item }) => {
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
     bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
-//   const projectTitle = data.name.split(" ").join("-").toLowerCase();
+
  
     return (
         <motion.div variants={projectVariant} className="relative">
@@ -51,14 +54,23 @@ const Project = ({ item }) => {
               {item.description}
             </p>
             <div className="buttonsGrp">
-            <Stack direction="row" spacing={2}>
-                <Button href={`${item.source}`} target="_blank"size="small" variant="outlined" startIcon={<GitHubIcon/>}>
-                    Source
+            <Grid container spacing={1}>
+              <Grid item xs={6}>
+                <Button href={`${item.source}`} target="_blank"size="medium" variant="contained" startIcon={<GitHubIcon/>}>
+                    Backend
                 </Button>
-                <Button href={`${item.deployedUrl}`} target="_blank"size="small" variant="outlined" startIcon={<StreamIcon/>}>
+                </Grid>
+                <Grid item xs={6}>
+                <Button href={`${item.front}`} target="_blank"size="medium" variant="contained" startIcon={<GitHubIcon/>}>
+                    Frontend
+                </Button>
+                </Grid>
+                <Grid item xs = {12}>
+                <Button href={`${item.deployedUrl}`} target="_blank"size="medium" variant="contained"color="error" startIcon={<StreamIcon/>}>
                     Deployed Site
                 </Button>
-            </Stack>
+                </Grid>
+            </Grid>
             </div>
           </div>
           <img src={`../assets/project-${item.id}.png`} alt={item.name} />
