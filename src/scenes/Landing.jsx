@@ -120,12 +120,12 @@ const Landing = ({ setSelectedPage }) => {
           }}
         >
         <AnchorLink
-            className="rounded-sm bg-gradient-rainblue py-0.5 pr-0.5 font-semibold"
+            className="rounded-sm bg-gradient-to-r from-rose-400 to-orange-300 py-2 pr-3 font-extrabold text-black border-2 border-black"
             href="https://drive.google.com/file/d/14AysrzhgY5j0Tpd646tqaXXzFrQh5qfJ/view?usp=drivesdk"
             target="_blank"
             rel="noreferrer"
           >
-            <div className="bg-deep-blue hover:text-red transition duration-500 w-full h-full flex items-center justify-center px-20 font-playfair">
+            <div className="w-full h-full flex items-center justify-center px-20 font-playfair">
               Resume
             </div>
           </AnchorLink>
