@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import Button from '@mui/material/Button';
 import StreamIcon from '@mui/icons-material/Stream';
-import "./Landing.css";
+import "./Projects.css";
 import { Grid } from "@mui/material";
 const container = {
   hidden: {},
@@ -39,34 +39,43 @@ const projects=[
       source:"https://github.com/AR-Pavan/quiz-app-backend",
       front:"https://github.com/AR-Pavan/quiz-app-frontend",
       deployedUrl:"https://my-simple-quiz-app-007.netlify.app/",
+    },
+    {
+      id:"4",
+      name:"Admin Dashboard",
+      description:"This Dashboard mainly focusus on getting data from backend and displaying it beautifully.",
+      source:"https://github.com/AR-Pavan/admin-dashboard-backend",
+      front:"https://github.com/AR-Pavan/admin-dashboard-frontend",
+      deployedUrl:"https://grand-cranachan-73fecf.netlify.app/",
     }
 ]
 const Project = ({ item }) => {
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
-    bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
+    bg-grey z-100 flex flex-col p-16 text-deep-blue`;
 
  
     return (
-        <motion.div variants={projectVariant} className="relative">
+        <motion.div variants={projectVariant} className="relative project">
           <div className={overlayStyles}>
-            <p className="text-2xl font-playfair">{item.name}</p>
-            <p className="mt-7">
+            <p className="text-2xl font-playfair name">{item.name}</p>
+            <p className="text-sm-center text-md-center text-lg-center text-xl-center desc">
               {item.description}
             </p>
-            <div className="buttonsGrp">
-            <Grid container spacing={1}>
-              <Grid item xs={6}>
-                <Button href={`${item.source}`} target="_blank"size="medium" variant="contained" startIcon={<GitHubIcon/>}>
+            
+            <div className="buttonsGrp mt-0">
+            <Grid container spacing={3}>
+              <Grid item xs={5}>
+                <Button href={`${item.source}`} target="_blank"size="small" variant="contained" startIcon={<GitHubIcon/>}>
                     Backend
                 </Button>
                 </Grid>
-                <Grid item xs={6}>
-                <Button href={`${item.front}`} target="_blank"size="medium" variant="contained" startIcon={<GitHubIcon/>}>
+                <Grid item xs={5}>
+                <Button href={`${item.front}`} target="_blank"size="small" variant="contained" startIcon={<GitHubIcon/>}>
                     Frontend
                 </Button>
                 </Grid>
-                <Grid item xs = {12}>
-                <Button href={`${item.deployedUrl}`} target="_blank"size="medium" variant="contained"color="error" startIcon={<StreamIcon/>}>
+                <Grid item xs = {10}>
+                <Button href={`${item.deployedUrl}`} target="_blank"size="small" variant="contained"color="error" startIcon={<StreamIcon/>}>
                     Deployed Site
                 </Button>
                 </Grid>

@@ -3,6 +3,7 @@ import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import "./Landing.css";
+
 const Landing = ({ setSelectedPage }) => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
   return (
@@ -119,7 +120,7 @@ const Landing = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-        <AnchorLink
+          <a
             className="rounded-sm bg-gradient-to-r from-rose-400 to-orange-300 py-2 pr-3 font-extrabold text-black border-2 border-black"
             href="https://drive.google.com/file/d/14AysrzhgY5j0Tpd646tqaXXzFrQh5qfJ/view?usp=drivesdk"
             target="_blank"
@@ -128,8 +129,8 @@ const Landing = ({ setSelectedPage }) => {
             <div className="w-full h-full flex items-center justify-center px-20 font-playfair">
               Resume
             </div>
-          </AnchorLink>
-          </motion.div>
+          </a>
+        </motion.div>
       </div>
     </section>
   );
