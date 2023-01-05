@@ -122,7 +122,7 @@ const Landing = ({ setSelectedPage }) => {
         >
           <a
             className="rounded-sm bg-gradient-to-r from-rose-400 to-orange-300 py-2 pr-3 font-extrabold text-black border-2 border-black"
-            href="https://drive.google.com/file/d/1YMZSilxSyjvQ6Dmh06HhK8mUEa8lA2r7/view?usp=share_link"
+            href="https://drive.google.com/open?id=1NPjJrUcoQv26pCov7msP9d5dp2Cx0GZ9&authuser=0&usp=drive_link"
             target="_blank"
             rel="noreferrer"
           >
